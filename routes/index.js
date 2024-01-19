@@ -1,7 +1,7 @@
 const express = require('express');
-const router = express.Router();
+const index = express.Router();
 
-router.get('/', (req, res) => {
+index.get('/', (req, res) => {
     res.send(`<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
     </html>`);
 });
 
-router.use((req, res) => {
+index.use((req, res) => {
     res.status(404).send(`<h1>Página no encontrada</h1><a href="/">Inicio</a>`)
 })
-module.exports = router
+module.exports = index;

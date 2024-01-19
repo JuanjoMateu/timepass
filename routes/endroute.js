@@ -1,7 +1,7 @@
 const express = require('express');
-const router = express.Router();
+const endroute = express.Router();
 
-router.get('/endroute', (req, res) => {
+endroute.get('/endroute', (req, res) => {
   res.send(`<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -20,4 +20,4 @@ router.get('/endroute', (req, res) => {
     </html>`);
 });
 
-module.exports = router;
+module.exports = endroute;
