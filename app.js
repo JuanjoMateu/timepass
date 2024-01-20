@@ -5,9 +5,9 @@ const horaMiddleware = require('./middlewares/horaMiddleware');
 const validarHora = require('./middlewares/validarHora');
 const endroute = require('./routes/endroute');
 
-app.use(endroute);
 app.use(horaMiddleware);
 app.use(validarHora);
+app.use('/', endroute);
 app.use('/', index);
 
 
